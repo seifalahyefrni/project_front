@@ -54,6 +54,19 @@
         "idDepart": 3,
         "nomDepart": "aaa"
     }
+],
+
+"equipe":[
+  {
+    "idEquipe": 1,
+    "nomEquipe": "innovators",
+    "niveau":"Senior",
+    "etudiants" :[],
+    "detailEquipe":{
+                    "salle": 11,
+                    "thematique": "theme"
+                    }
+  }
 ]
 
 

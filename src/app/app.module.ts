@@ -7,13 +7,14 @@ import { AppComponent } from './app.component';
 
 import { NavdashComponent } from './navdash/navdash.component';
 import { NavtopComponent } from './navtop/navtop.component';
+import { DetailEquipeComponent } from './detail-equipe/detail-equipe.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-
     NavdashComponent,
-    NavtopComponent
+    NavtopComponent,
+    DetailEquipeComponent
   ],
   imports: [
     BrowserModule,
