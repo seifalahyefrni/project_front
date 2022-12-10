@@ -7,67 +7,68 @@
       "option": "GAMIX",
       "equipes": [],
       "departement": {
-          "idDepart": 3,
-          "nomDepart": "aaa"
-      },
-      "contracts": []
-         },
-         {
-          "idEtudiant": 2,
-          "prenomE": "Georgebb",
-          "nomE": "Clooney",
-          "option": "GAMIX",
-          "Contracts": "",
-          "equipes": "",
-          "departement": ""
-             },
-             {
-              "idEtudiant": 3,
-              "prenomE": "Georgeccc",
-              "nomE": "Clooney",
-              "option": "GAMIX",
-              "Contracts": "",
-              "equipes": "",
-              "departement": ""
-                 },  {
-                  "idEtudiant": 4,
-                  "prenomE": "Georgedd",
-                  "nomE": "Clooney",
-                  "option": "GAMIX",
-                  "Contracts": "",
-                  "equipes": "",
-                  "departement": ""
-                     }
-                     ,  {
-                      "idEtudiant": 6,
-                      "prenomE": "Georgettt",
-                      "nomE": "Clooney",
-                      "option": "GAMIX",
-                      "Contracts": "",
-                      "equipes": "",
-                      "departement": ""
-                         }
-  ],
-
-  "departement":[
-    {
         "idDepart": 3,
         "nomDepart": "aaa"
+      },
+      "contracts": []
+    },
+    {
+      "idEtudiant": 2,
+      "prenomE": "Georgebb",
+      "nomE": "Clooney",
+      "option": "GAMIX",
+      "Contracts": "",
+      "equipes": "",
+      "departement": ""
+    },
+    {
+      "idEtudiant": 3,
+      "prenomE": "Georgeccc",
+      "nomE": "Clooney",
+      "option": "GAMIX",
+      "Contracts": "",
+      "equipes": "",
+      "departement": ""
+    },
+    {
+      "idEtudiant": 4,
+      "prenomE": "Georgedd",
+      "nomE": "Clooney",
+      "option": "GAMIX",
+      "Contracts": "",
+      "equipes": "",
+      "departement": ""
+    },
+    {
+      "idEtudiant": 6,
+      "prenomE": "Georgettt",
+      "nomE": "Clooney",
+      "option": "GAMIX",
+      "Contracts": "",
+      "equipes": "",
+      "departement": ""
     }
-],
-
-"equipe":[
-  {
-    "idEquipe": 1,
-    "nomEquipe": "innovators",
-    "niveau":"Senior",
-    "etudiants" :[],
-    "detailEquipe":{
-                    "salle": 11,
-                    "thematique": "theme"
-                    }
-  }
-]
-
-
+  ],
+  "departement": [
+    {
+      "idDepart": 3,
+      "nomDepart": "aaa"
+    },
+    {
+      "idDepart": 4,
+      "nomDepart": "Esprit"
+    }
+  ],
+  "equipe": [
+    {
+      "idEquipe": 1,
+      "nomEquipe": "innovators",
+      "niveau": "Senior",
+      "etudiants": [],
+      "detailEquipe": {
+        "salle": 11,
+        "thematique": "theme"
+      }
+    }
+  ]
 }

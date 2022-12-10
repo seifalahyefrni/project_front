@@ -14,7 +14,24 @@ export class DepartementService {
   //URL du Backend
   url = "http://localhost:3000/departement";
 
-  getAllUsers(){
-   return this.http.get<Departement[]>(this.url);
+  getAllDepartements(){
+    return this.http.get<Departement[]>(this.url);
   }
+
+  getDepartementById(id: Number){
+    return this.http.get<Departement>(this.url+'/'+id);
+  }
+
+  addDepartement(departement:Departement){
+    return this.http.post(this.url,departement);
+  }
+
+  deleteDepartement(id:Number){
+    return this.http.delete(this.url+'/'+id);
+  }
+
+  updateDepartement(id:Number,departement:Departement){
+    return this.http.put<Departement>(this.url+'/'+id, departement);
+  }
+
 }

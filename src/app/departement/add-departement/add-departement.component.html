@@ -1,0 +1,28 @@
+<!--
+  Template Driven Form
+
+  <form action="" #f="ngForm" (ngSubmit)="Save(f)">
+
+  <input type="text" name="champ1" ngModel #champ1="ngModel" required>
+  <small *ngIf="champ1.invalid && champ1.touched">Error message</small>
+  <button type="submit">Save</button>
+</form> -->
+
+<form [formGroup]="reactiveForm" (ngSubmit)="Save()">
+    <div class="form-group">
+        <label for="fn">Nom Departement</label>
+        <input type="text" class="form-control" id="fn" formControlName="nomdepar?">
+        <small style="color: red;"
+          *ngIf="nomdepar?.errors?.['required'] &&
+          nomdepar?.touched">
+          First is required
+        </small>
+        <small style="color: red;"
+          *ngIf="nomdepar?.errors?.['minlength'] &&
+          nomdepar?.touched">
+          Nom Departement at least 3 caracters
+        </small>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+
+</form>
