@@ -12,11 +12,11 @@ export class EquipeService {
 
   constructor( private http: HttpClient ) { }
   //URL du Backend
-  url = "http://localhost:8089/retrieve-all-equipes"
-  url3 = "http://localhost:8089/update-equipe-by-id"
-  url5 = "http://localhost:8089/Equipe";
-  url6 = "http://localhost:8089/add-equipe";
-  url7 = "http://localhost:8089/delete-equipe"
+  url = "http://localhost:3000/retrieve-all-equipes"
+  url3 = "http://localhost:3000/update-equipe-by-id"
+  url5 = "http://localhost:3000/Equipe";
+  url6 = "http://localhost:3000/add-equipe";
+  url7 = "http://localhost:3000/delete-equipe"
 
   
   httpOptions = { headers: new HttpHeaders({

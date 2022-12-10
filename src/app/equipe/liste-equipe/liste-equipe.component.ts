@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { Equipe } from 'src/app/Core/Models/equipe';
+import { Router } from '@angular/router';
 import { EquipeService } from 'src/app/Core/services/equipe.service';
 import { CommonModule } from '@angular/common';
 
@@ -15,6 +15,7 @@ export class ListeEquipeComponent implements OnInit {
   listeEquipe:Equipe[]=[];
   
   ngOnInit(): void {
+    this.getDataFormService();
   }
 
   getDataFormService(){
