@@ -31,8 +31,10 @@ export class EquipeService {
     return this.http.delete(this.url+'/'+id);
   }
 
-  updateEquipe(id:Number,Equipe:Equipe){
-    return this.http.put<Equipe>(this.url+'/'+id, Equipe);
+  updateEquipe(Equipe:Equipe){
+    const ID = Number(Equipe.idEquipe);
+
+    return this.http.put<Equipe>(this.url+'/'+ID, Equipe);
   }
 
 }

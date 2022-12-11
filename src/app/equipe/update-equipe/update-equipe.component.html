@@ -1,0 +1,37 @@
+<h2>
+    Here I read the value: {{myId}}
+  </h2>
+  
+  
+
+
+
+<form [formGroup]="updateUserForm" (ngSubmit)="update()">
+    <div class="form-group">
+      <label for="fn">Nom d'equipe</label>
+      <input type="text" class="form-control" id="fn" formControlName="nomEquipe">
+    </div>
+  
+  
+    <div class="form-group">
+      <label for="fn">Details d'equipe</label>
+      <input type="text" class="form-control" id="ln" formControlName="detailEquipe">
+    </div>
+  
+    <div class="form-group">
+      <label for="fn">Niveau Equipe</label>
+      <input type="text" class="form-control" id="dob"
+        formControlName="niveau">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Etudiants</label>
+      <input type="email" class="form-control" id="exampleInputEmail1"
+        formControlName="etudiants">
+    </div>
+   
+
+  
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  
+  

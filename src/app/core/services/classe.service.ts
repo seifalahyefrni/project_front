@@ -7,17 +7,33 @@ import { Classe } from '../Models/classe';
   providedIn: 'root'
 })
 export class ClasseService {
-  Classe: Classe[]= [];
+  listeClasses: Classe[]= [];
 
-  constructor( private http: HttpClient) { }
-  url = "http://localhost:3000/Classe";
+
+  //URL du Backend
+  url = "http://localhost:3000/classe";
+  constructor(private http:HttpClient) { }
+
+
   getAllClasses(){
     return this.http.get<Classe[]>(this.url);
+  } 
+
+  getClasseById(id: Number){
+    return this.http.get<Classe>(this.url+'/'+id);
   }
-  url1 = "http://localhost:3000/Classe/add-classe";
-  httpOptions = { headers: new HttpHeaders({
-  'Content-Type': 'application/json'})}
-  addData(classe:Classe): Observable<Classe>{
-  return this.http.post<Classe>(this. url1, classe, this.httpOptions);
-}
+
+  addClasse(Classe:Classe){
+    return this.http.post(this.url,Classe);
+  }
+
+  deleteClasse(id:Number){
+    return this.http.delete(this.url+'/'+id);
+  }
+
+  updateClasse(Classe:Classe){
+    const ID = Number(Classe.idClasse);
+
+    return this.http.put<Classe>(this.url+'/'+ID, Classe);
+  }
 }
