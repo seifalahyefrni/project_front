@@ -66,8 +66,20 @@
                     "salle": 11,
                     "thematique": "theme"
                     }
+  },
+  {
+    "idEquipe": 2,
+    "nomEquipe": "innovators",
+    "niveau":"Senior",
+    "etudiants" :[],
+    "detailEquipe":{
+                    "salle": 11,
+                    "thematique": "theme"
+                    }
   }
 ]
+
+
 
 
 }

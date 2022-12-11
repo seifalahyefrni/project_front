@@ -7,36 +7,32 @@ import { Classe } from '../Models/classe';
   providedIn: 'root'
 })
 export class EquipeService {
-  departement: Equipe[]= [];
+  listeEquipes: Equipe[]= [];
 
 
-  constructor( private http: HttpClient ) { }
   //URL du Backend
-  url = "http://localhost:3000/retrieve-all-equipes"
-  url3 = "http://localhost:3000/update-equipe-by-id"
-  url5 = "http://localhost:3000/Equipe";
-  url6 = "http://localhost:3000/add-equipe";
-  url7 = "http://localhost:3000/delete-equipe"
+  url = "http://localhost:3000/equipe";
+  constructor(private http:HttpClient) { }
 
-  
-  httpOptions = { headers: new HttpHeaders({
-    'Content-Type': 'application/json'})}
 
   getAllEquipes(){
-   return this.http.get<Equipe[]>(this.url);
-  }
-  
-  getEquipeById(id:number){
-    return this.http.get<Equipe[]>(this.url+'/'+id);
+    return this.http.get<Equipe[]>(this.url);
+  } 
+
+  getEquipeById(id: Number){
+    return this.http.get<Equipe>(this.url+'/'+id);
   }
 
-  addData(Equipe:Equipe){
-    return this.http.post<Equipe>(this. url6, Equipe, this.httpOptions); }
+  addEquipe(Equipe:Equipe){
+    return this.http.post(this.url,Equipe);
+  }
 
-  updateData(id:number,Equipe:Equipe){
-      return this.http.put<Equipe>(this.url3+'/'+ id, Equipe, this.httpOptions); }
-  
-  deleteData (id:number){
-        return this.http.delete<Equipe>(this.url7+'/'+id);
-        }
+  deleteEquipe(id:Number){
+    return this.http.delete(this.url+'/'+id);
+  }
+
+  updateEquipe(id:Number,Equipe:Equipe){
+    return this.http.put<Equipe>(this.url+'/'+id, Equipe);
+  }
+
 }

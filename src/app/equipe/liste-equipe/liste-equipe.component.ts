@@ -10,28 +10,19 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./liste-equipe.component.css']
 })
 export class ListeEquipeComponent implements OnInit {
-
-  constructor(private route:Router, private Equipes:EquipeService) {  }
-  listeEquipe:Equipe[]=[];
+  constructor(private route:Router, private Equipes:EquipeService) { }
+    listeEquipe:Equipe[] = [];
   
-  ngOnInit(): void {
-    this.getDataFormService();
+    ngOnInit(): void {
+      this.getEquipe();
+  
+    }
+  
+    getEquipe(){
+      this.Equipes.getAllEquipes().subscribe(data => this.listeEquipe=data);
+      console.assert(this.Equipes);
+    }
+    deleteEquipe(id:any){
+      this.Equipes.deleteEquipe(Number(id)).subscribe( () =>this.getEquipe() );
+    }
   }
-
-  getDataFormService(){
-    this.Equipes.getAllEquipes().subscribe(data=>this.listeEquipe=data);
-    }
-
-    getOneDataFormService(id:number){
-      this.Equipes.getEquipeById(id).subscribe(data=>this.listeEquipe=data);
-      }
-   
- 
-  updateMyObject(id:number,Equipe:Equipe){
-    this.Equipes.updateData(id,Equipe).subscribe();
-    }
-  deleteMyObject(id:number){
-    this.Equipes. deleteData(id).subscribe();
-    }
-
-}

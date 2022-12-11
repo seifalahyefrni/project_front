@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { NavdashComponent } from './navdash/navdash.component';
 import { NavtopComponent } from './navtop/navtop.component';
 import { DetailEquipeComponent } from './detail-equipe/detail-equipe.component';
+import { AddEquipeComponent } from './equie/add-equipe/add-equipe.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavdashComponent,
     NavtopComponent,
-    DetailEquipeComponent
+    DetailEquipeComponent,
+    AddEquipeComponent
   ],
   imports: [
     BrowserModule,
