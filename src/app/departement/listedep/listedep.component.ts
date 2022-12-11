@@ -6,7 +6,8 @@ import { DepartementService } from 'src/app/Core/services/departement.service';
 @Component({
   selector: 'app-listedep',
   templateUrl: './listedep.component.html',
-  styleUrls: ['./listedep.component.css']
+  styleUrls: ['./listedep.component.css'],
+  providers: [DepartementService]
 })
 export class ListedepComponent implements OnInit {
 
@@ -19,9 +20,13 @@ export class ListedepComponent implements OnInit {
   }
 
   getdep(){
-    this.departements.getAllUsers().subscribe(data => this.listdepartements=data);
+    this.departements.getAllDepartements().subscribe(data => this.listdepartements=data);
     console.assert(this.departements);
   }
+  deleteDepartement(id:any){
+    this.departements.deleteDepartement(Number(id)).subscribe( () =>this.getdep() );
+  }
+  
 
 
 }
