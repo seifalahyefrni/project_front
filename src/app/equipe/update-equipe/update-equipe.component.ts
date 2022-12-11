@@ -35,10 +35,9 @@ updateUserForm= this.fb.group({
   })
   }
   update(){
-    this.updateUserForm
-    this.Equipes.updateEquipe(this.updateUserForm.value).subscribe(()=>
+   /* this.Equipes.updateEquipe(this.updateUserForm.value).subscribe(()=>
     this.R.navigate(['equipe'])
-    )
+    )*/
   }
 
 }
